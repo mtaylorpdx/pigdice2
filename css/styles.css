@@ -1,4 +1,9 @@
 body {
   text-align: center;
-  
+
+}
+
+#dices {
+  text-align: center;
+  /* display: none; */
 }
