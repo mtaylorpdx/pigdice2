@@ -17,16 +17,24 @@ function rollDice1() {
   console.log(diceRoll)
   if (diceRoll === 1 && currentPlayer === 1) {
     player1.turnTotal = [0];
+    $(".result1").text("Player 1 Busts!");
+    $(".result2").empty();
     currentPlayer = 2;
     console.log("turn over");
   } else if (diceRoll === 1 && currentPlayer === 2) {
     player2.turnTotal = [0];
+    $(".result2").text("Player 2 Busts!");
+    $(".result1").empty();
     currentPlayer = 1;
     console.log("turn over");
   } else if (currentPlayer === 1) {
+    $(".result1").append("<li>" + diceRoll + "</li>");
+    $(".result2").empty();
     player1.turnTotal.push(diceRoll);
   } else {
     player2.turnTotal.push(diceRoll);
+    $(".result1").empty();
+    $(".result2").append("<li>" + diceRoll + "</li>");
     return 
   }
 }
@@ -67,7 +75,7 @@ $(document).ready(function() {
   $("#roll1").click(function(event) {
     event.preventDefault();
     rollDice1();
-    // (".result1").append(turnTotal);
+
     console.log(player1.turnTotal);
     console.log(player2.turnTotal);
   });
@@ -75,7 +83,8 @@ $(document).ready(function() {
   $("#hold1").click(function(event) {
     event.preventDefault();
     holdDice1();
-    // (".result1").append(turnTotal);
+    $("#scoreTotal1").empty().text(player1.gameTotal);
+    $("#scoreTotal2").empty().text(player2.gameTotal);
     console.log(player1.gameTotal);
     console.log(player2.gameTotal);
   });
