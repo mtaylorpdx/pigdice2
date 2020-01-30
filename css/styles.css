@@ -1,9 +1,24 @@
 body {
   text-align: center;
+  /* background-image: radial-gradient(rgb(59, 153, 59), rgb(15, 117, 15),rgb(6, 70, 6)) !important; */
+  /* background: linear-gradient(to top left,rgb(59, 153, 59), rgb(15, 117, 15),rgb(6, 70, 6)) */
 
 }
 
 #dices {
   text-align: center;
-  /* display: none; */
+ 
+}
+
+.container {
+  background: linear-gradient(to top left,rgb(59, 153, 59), rgb(15, 117, 15),rgb(6, 70, 6))
+}
+
+.jumbotron {
+  background-color: white !important;
+  height: 240px;
+}
+
+.result1, .result2 {
+  font-size: large;
 }
