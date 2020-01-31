@@ -85,9 +85,6 @@ $(document).ready(function() {
     event.preventDefault();
     // rollDice.displayDice(diceRoll, diceRoll2);
     rollDice();
-  
-    console.log(player1.turnTotal);
-    console.log(player2.turnTotal);
   });
 
   $("#hold1").click(function(event) {
@@ -95,8 +92,6 @@ $(document).ready(function() {
     holdDice();
     $("#scoreTotal1").empty().text(player1.gameTotal);
     $("#scoreTotal2").empty().text(player2.gameTotal);
-    console.log(player1.gameTotal);
-    console.log(player2.gameTotal);
   });
 
 });
