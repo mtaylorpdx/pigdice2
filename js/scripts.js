@@ -1,16 +1,11 @@
 //Business Logic for Player 1
 
-function Player1() {
+function Player() {
   this.turnTotal = [];
   this.gameTotal = 0;
   this.currentRoll = [];
 }
 
-function Player2() {
-  this.turnTotal = [];
-  this.gameTotal = 0;
-  this.currentRoll = [];
-}
 
 //ROLL button
 function rollDice() {
@@ -74,8 +69,8 @@ function holdDice() {
 
 //User Interface for ROLL & HOLD
 
-var player1 = new Player1();
-var player2 = new Player2();
+var player1 = new Player();
+var player2 = new Player();
 var currentPlayer = 1
 
 
