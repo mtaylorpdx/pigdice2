@@ -1,4 +1,4 @@
-# Pig Latin
+# Pig Dice
 ## Specs:
 
 * Behavior: When user clicks on the ROLL button, they recieve a random number
